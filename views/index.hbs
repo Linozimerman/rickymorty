@@ -1,0 +1,23 @@
+<h1>{{appTitle}} 🚀</h1>
+<p>Welcome Ironhacker!</p>
+
+<h1>Add the character to the episode:</h1>
+<form action="/character/add-to-episode" method="THE METHOD HERE">
+    <label for="character">Select the character</label>
+    <select name="characterId">
+        {--! HERE WE ARE GOING TO DISPLAY ONE OPTION FOR EACH CHARACTER --}
+        {{#each allCharacter}}
+        <option value="dfdf">{{this.name}}</option>
+        {{/each}}
+
+    </select>
+    <label for="episode">Select the episode</label>
+    <select name="episodeId">
+        {--! HERE WE ARE GOING TO DISPLAY ONE OPTION FOR EACH EPISODE --}
+        {{#each allEpisodes}}
+        <option value="fdfdf">{{this.name}}</option>
+        {{/each}}
+
+    </select>
+    <button type="submit">Submit</button>
+</form>
